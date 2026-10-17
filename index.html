@@ -151,6 +151,16 @@ footer a{color:var(--fg)}
 .bar .btn{flex:1;padding:15px 18px;font-size:19px;box-shadow:none}
 @media (max-width:420px){ .conta{grid-template-columns:1fr} .bar .p b{font-size:19px} .guar{grid-template-columns:1fr} .bonus{grid-template-columns:1fr} }
 </style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3072531926115631');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('track','InitiateCheckout',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3072531926115631&ev=PageView&noscript=1" alt=""></noscript>
+<!-- /Meta Pixel -->
 </head>
 <body>
 
