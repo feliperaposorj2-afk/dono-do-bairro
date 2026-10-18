@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dono-do-bairro.vercel.app/">
+<meta property="og:title" content="Dono do Bairro · Agenda cheia sem rodar a cidade">
+<meta property="og:description" content="O passo a passo de um técnico de ar-condicionado com 381 clientes em 3 bairros. E-book + kit para imprimir.">
+<meta property="og:image" content="https://dono-do-bairro.vercel.app/capa-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="O passo a passo de um técnico de ar-condicionado com 381 clientes em 3 bairros. E-book + kit para imprimir.">
 <title>Dono do Bairro</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="E-book para técnico de ar-condicionado: escolha 3 bairros, apareça para os clientes certos, organize a semana e saiba quanto cobrar.">
@@ -45,6 +52,10 @@ p{margin:0}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
+.pvs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.pv{flex:0 0 min(72%,280px);margin:0;scroll-snap-align:start}
+.pv img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 10px 30px -12px rgba(0,0,0,.8)}
+.pv figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 /* hero */
 .bens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .ben{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--fox);border-radius:12px;padding:14px;min-width:0}
@@ -157,7 +168,7 @@ footer a{color:var(--fg)}
 fbq('init','3072531926115631');
 fbq('track','PageView');
 fbq('track','ViewContent',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('track','InitiateCheckout',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('trackCustom','CliqueComprar',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3072531926115631&ev=PageView&noscript=1" alt=""></noscript>
 <!-- /Meta Pixel -->
@@ -269,6 +280,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <div><span class="k">Bônus incluso</span><b>Kit para imprimir + tabela de preços de referência</b>
         <ul><li>Ficha de atendimento e mapa do território</li><li>Desafio de 30 dias e agenda da semana</li><li>Conta do dia e metas</li><li>A minha tabela de preços, para você adaptar</li></ul></div>
     </div>
+  </div>
+</section>
+
+<section id="por-dentro">
+  <div class="wrap stack">
+    <h2>Veja <span class="o">por dentro</span></h2>
+    <p class="muted">Páginas reais do e-book e do kit para imprimir. Arraste para o lado.</p>
+    <div class="pvs"><figure class="pv"><img src="p-sumario.jpg" alt="Sumário: 7 módulos + desafio" width="560" height="792" loading="lazy"><figcaption>Sumário: 7 módulos + desafio</figcaption></figure><figure class="pv"><img src="p-exercicio.jpg" alt="Exercício prático de cada módulo" width="560" height="792" loading="lazy"><figcaption>Exercício prático de cada módulo</figcaption></figure><figure class="pv"><img src="p-tabela.jpg" alt="A minha tabela de preços real" width="560" height="792" loading="lazy"><figcaption>A minha tabela de preços real</figcaption></figure><figure class="pv"><img src="p-ficha.jpg" alt="Kit: ficha de atendimento" width="560" height="792" loading="lazy"><figcaption>Kit: ficha de atendimento</figcaption></figure><figure class="pv"><img src="p-desafio.jpg" alt="Kit: desafio de 30 dias" width="560" height="792" loading="lazy"><figcaption>Kit: desafio de 30 dias</figcaption></figure></div>
   </div>
 </section>
 
