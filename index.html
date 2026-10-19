@@ -168,7 +168,7 @@ footer a{color:var(--fg)}
 fbq('init','3072531926115631');
 fbq('track','PageView');
 fbq('track','ViewContent',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('trackCustom','CliqueComprar',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('track','InitiateCheckout',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3072531926115631&ev=PageView&noscript=1" alt=""></noscript>
 <!-- /Meta Pixel -->
