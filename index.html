@@ -93,6 +93,18 @@ p{margin:0}
 .photo{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
 .photo img{display:block;width:100%;height:auto}
 .cap{font-size:15px;color:var(--muted);margin-top:-10px}
+.tk{background:radial-gradient(120% 60% at 50% 0%,rgba(238,106,51,.14),transparent 70%),var(--bg)}
+.tk-big{background:var(--panel);border:1.5px solid var(--fox);border-radius:16px;padding:22px 20px;text-align:center}
+.tk-big b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(64px,16vw,96px);line-height:1;color:var(--fox);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.tk-big span{display:block;margin-top:10px;font-size:16px;color:var(--muted)}
+.tk-bars{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.tk-row{display:grid;grid-template-columns:118px minmax(0,1fr) 72px;align-items:center;gap:12px;font-size:16px}
+.tk-l{color:var(--fg)}
+.tk-t{height:14px;background:var(--panel-2);border-radius:999px;overflow:hidden}
+.tk-t i{display:block;height:100%;background:var(--fox);border-radius:999px}
+.tk-row b{font-family:var(--display);font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.tk-q{margin:0;border-left:4px solid var(--fox);padding:6px 0 6px 18px;font-family:var(--display);font-weight:800;font-size:clamp(22px,4.4vw,28px);line-height:1.2}
+@media (max-width:420px){.tk-row{grid-template-columns:108px minmax(0,1fr) 62px;gap:8px;font-size:14.5px}}
 .conta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .conta div{background:var(--panel);border-radius:12px;padding:14px;border:1px solid var(--line);min-width:0}
 .conta b{display:block;font-family:var(--display);font-size:24px;color:var(--fg);font-variant-numeric:tabular-nums}
@@ -233,6 +245,29 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <div><b>2</b><span>limpezas fechadas</span></div>
       <div><b>R$ 500</b><span>a mais no dia</span></div>
     </div>
+  </div>
+</section>
+
+<section class="tk">
+  <div class="wrap stack">
+    <span class="pill">Números reais · março de 2026</span>
+    <h2>R$ 492 por serviço. <span class="o">Sem sair do meu bairro.</span></h2>
+    <p class="muted">Todo mundo diz que é a Zona Sul que dá dinheiro. E dá mesmo. Mas em março eu fiz <b style="color:var(--fg)">70 serviços só em Campo Grande, Guaratiba e Recreio</b>, e cada um valeu, em média, quase R$ 500.</p>
+    <div class="tk-big">
+      <b>R$ 492</b>
+      <span>de ticket médio: o quanto cada serviço valeu, em média, no mês</span>
+    </div>
+    <div class="tk-bars" role="list" aria-label="Ticket médio por tipo de serviço em março">
+      <div class="tk-row" role="listitem"><span class="tk-l">Instalação</span><span class="tk-t"><i style="width:100%"></i></span><b>R$ 892</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Manutenção</span><span class="tk-t"><i style="width:51%"></i></span><b>R$ 452</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Desinstalação</span><span class="tk-t"><i style="width:46%"></i></span><b>R$ 412</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Limpeza</span><span class="tk-t"><i style="width:36%"></i></span><b>R$ 321</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Elétrica</span><span class="tk-t"><i style="width:33%"></i></span><b>R$ 291</b></div>
+    </div>
+    <p class="muted">Repara na manutenção: <b style="color:var(--fg)">22 serviços a R$ 452 cada</b>, em média. Uma limpeza simples não chega nesse valor sozinha. O que leva até lá é o jeito de trabalhar que eu ensino no e-book: o que está incluso antes de fechar, o upgrade na hora certa e o relatório no final.</p>
+    <blockquote class="tk-q">“Não é o bairro que faz o seu ticket médio. <span class="o">É o jeito que você trabalha.</span>”</blockquote>
+    <a class="btn js-buy" href="#oferta">Quero ganhar mais em cada serviço</a>
+    <p class="muted" style="font-size:15px">Números reais da Raposo Soluções em março de 2026. Não são promessa de resultado: cada região e cada técnico têm o seu ritmo.</p>
   </div>
 </section>
 
