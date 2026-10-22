@@ -173,6 +173,23 @@ footer a{color:var(--fg)}
 .bar .p small{font-size:13px;color:var(--muted);font-weight:600}
 .bar .btn{flex:1;padding:15px 18px;font-size:19px;box-shadow:none}
 @media (max-width:420px){ .conta{grid-template-columns:1fr} .bar .p b{font-size:19px} .guar{grid-template-columns:1fr} .bonus{grid-template-columns:1fr} }
+
+/* página curta */
+.dor{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.dor li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:18px;line-height:1.4}
+.dor li::before{content:"✕";width:30px;height:30px;border-radius:50%;background:#2a1414;color:#ff6b5e;display:grid;place-items:center;font-weight:900;font-size:15px}
+.ganha{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ganha li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:19px;line-height:1.4}
+.ganha li::before{content:"✓";width:30px;height:30px;border-radius:50%;background:var(--fox);color:var(--fox-ink);display:grid;place-items:center;font-weight:900;font-size:15px}
+.ganha b{color:var(--fg)}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mini div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;min-width:0}
+.mini b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(26px,6vw,34px);color:var(--fox);line-height:1;font-variant-numeric:tabular-nums}
+.mini span{display:block;margin-top:6px;font-size:13.5px;color:var(--muted);line-height:1.3}
+.inc{list-style:none;margin:0;padding:18px 20px;border:1.5px dashed var(--fox);border-radius:16px;display:grid;gap:10px;text-align:left;background:linear-gradient(180deg,#22160f,#161210)}
+.inc li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:17px;line-height:1.35}
+.inc li::before{content:"✓";color:var(--fox);font-weight:900}
+.inc small{color:var(--muted)}
 </style>
 <!-- Meta Pixel -->
 <script>
@@ -187,48 +204,44 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </head>
 <body>
 
-
 <div class="tape"><p>⚡ Preço de lançamento: R$ 37,90 no Pix</p></div>
 
 <section class="hero">
   <div class="wrap stack">
-    <span class="pill">E-book • Ar-condicionado</span>
-    <h1>Pare de rodar a cidade. <span class="o">Seja o técnico do seu bairro.</span></h1>
-    <p class="lead">O passo a passo de um técnico que continua em campo para lotar a agenda perto de casa e organizar a sua empresa.</p>
-    <div class="bens"><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Agenda cheia perto de casa</b><span>3 bairros, anúncio de R$ 20 por dia só para eles.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.6-.6-3.1-1.6M12 6.5v11"/></svg></span><div><b>Orçamento que dá lucro</b><span>A minha tabela de preços e a conta do dia.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span><div><b>Ticket médio maior</b><span>Ganhe mais em cada serviço, sem cliente novo.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.5 2.2 4.5 5"/></svg></span><div><b>Ajudante e equipe</b><span>Regras, os sinais e como mandar embora.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span><div><b>Família no negócio</b><span>"Minha mulher não me ajuda" não é desculpa.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span><div><b>Cliente que volta</b><span>Pós-venda, lembrete de 6 meses e plano fixo.</span></div></div></div>
-    <ul class="chk"><li>Passo a passo prático</li><li>Exemplos reais do meu dia a dia</li><li>Modelos para imprimir</li><li>Aplicação imediata</li></ul>
-    <div class="book"><div class="book-3d"><img src="capa-01.jpg" alt="Capa do e-book Dono do Bairro, de Felipe Raposo" width="413" height="584"></div></div>
-    <a class="btn js-buy" href="#oferta">Quero ser o Dono do Bairro</a>
+    <span class="pill">Para técnico de ar-condicionado</span>
+    <h1>2h37 da manhã. <span class="o">O corpo cansado, mas a cabeça não desliga.</span></h1>
+    <p class="lead">Cliente pra atender, conta pra pagar, ajudante que faltou, orçamento que ninguém respondeu, família esperando.</p>
+    <p class="qbar">Se você trabalha muito e o dinheiro não sobra, o problema não é falta de serviço. É falta de organização.</p>
+    <div class="book"><div class="book-3d" style="width:min(240px,60vw)"><img src="capa-01.jpg" alt="Capa do e-book Dono do Bairro, de Felipe Raposo" width="413" height="584"></div></div>
+    <a class="btn js-buy" href="#oferta">Quero organizar a minha empresa</a>
   </div>
 </section>
 
 <section>
   <div class="wrap stack">
-    <h2>Aquele dia em que você atravessa a cidade por um serviço só e chega em casa sem nada no bolso</h2>
-    <p class="muted">Você sai cedo, pega trânsito, paga gasolina, estacionamento, almoço. Faz o serviço bem feito. Volta à noite cansado. E quando faz a conta, quase não sobrou nada.</p>
-    <p class="qbar">Não é falta de trabalho. É falta de organização.</p>
-    <p class="muted">Ninguém ensina o técnico a escolher onde atender, quanto cobrar e como fazer o cliente voltar. Aí você aceita tudo, dá desconto, cobra no chute e passa a vida correndo atrás de cliente novo.</p>
+    <h2>Você se reconhece?</h2>
+    <ul class="dor">
+      <li>Atravessa a cidade por um serviço só e volta pra casa sem nada no bolso.</li>
+      <li>Cliente pede desconto e você dá, com medo de perder o serviço.</li>
+      <li>Trabalha a semana inteira e não sabe quanto sobrou no fim do mês.</li>
+      <li>Tem ajudante que dá mais dor de cabeça do que ajuda.</li>
+      <li>Faz o serviço bem feito, mas o cliente some e chama outro técnico.</li>
+      <li>Trabalha de segunda a sábado e a família só vê você cansado.</li>
+    </ul>
+    <p class="muted">Ninguém ensina isso pro técnico. Ensinam a limpar, a instalar, a fazer vácuo. <b style="color:var(--fg)">Ninguém ensina a organizar a empresa.</b></p>
   </div>
 </section>
 
-<section>
+<section class="tk">
   <div class="wrap stack">
-    <h2>O atalho pra você <span class="o">parar de rodar</span> e começar a lucrar perto de casa</h2>
-    <p class="muted">Eu atendia a Zona Sul morando em Campo Grande. Saía às 6h30 para atender às 9h e voltava às 20h. Aos meus olhos, era lucrativo. Até que a minha esposa fez as contas: <b style="color:var(--fg)">o lucro era o mesmo de um dia trabalhando perto de casa</b>, só que eu perdia 4 horas no trânsito.</p>
-    <p class="muted">Foi aí que eu escolhi três bairros e decidi ser o técnico de referência neles. O “Dono do Bairro” é o passo a passo do que eu faço, escrito de técnico para técnico, sem enrolação.</p>
-    <span class="chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee6a33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Com exercício prático em cada módulo</span>
-  </div>
-</section>
-
-<section>
-  <div class="wrap stack">
-    <h2>Quem escreveu está em campo <span class="o">todo dia</span></h2>
-    <div class="photo"><img src="felipe-aparelhos.jpg" alt="Felipe Raposo com vários aparelhos de ar-condicionado Samsung para instalar" width="800" height="600" loading="lazy"></div>
-    <div class="nums">
-      <div class="num"><b>3</b><span>bairros atendidos: Campo Grande, Guaratiba e Recreio</span></div>
-      <div class="num"><b>381</b><span>clientes cadastrados, com nome, endereço e histórico</span></div>
-      <div class="num"><b>954</b><span>atendimentos no ano passado, somando as equipes</span></div>
-      <div class="num"><b>11</b><span>clientes com plano fixo de manutenção</span></div>
+    <h2>Eu vivo isso também. <span class="o">A diferença é que aprendi a organizar.</span></h2>
+    <div class="photo"><img src="felipe-escada.jpg" alt="Felipe Raposo instalando ar-condicionado em um condomínio" width="900" height="900" loading="lazy"></div>
+    <p class="muted">Eu atendia a Zona Sul morando em Campo Grande. Saía às 6h30 e voltava às 20h. Até que a minha esposa fez a conta: <b style="color:var(--fg)">eu ganhava o mesmo que perto de casa, só que perdia 4 horas no trânsito.</b> Escolhi 3 bairros e organizei a empresa.</p>
+    <div class="tk-big"><b>R$ 492</b><span>por serviço, em média, em março. Sem sair do meu bairro.</span></div>
+    <div class="mini">
+      <div><b>70</b><span>serviços em março</span></div>
+      <div><b>3</b><span>bairros perto de casa</span></div>
+      <div><b>381</b><span>clientes cadastrados</span></div>
     </div>
     <p class="muted" style="font-size:15px">Números reais da Raposo Soluções. Não são promessa de resultado: cada região e cada técnico têm o seu ritmo.</p>
   </div>
@@ -236,149 +249,41 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 
 <section>
   <div class="wrap stack">
-    <h2>Gastei R$ 120 num banner. <span class="o">Voltei com R$ 500.</span></h2>
-    <div class="photo"><img src="banner.jpg" alt="Banner em pé atrás do carro do Felipe, num condomínio no Recreio" width="480" height="470" loading="lazy"></div>
-    <p class="cap">O banner atrás do carro, no Recreio, em dezembro de 2025.</p>
-    <p class="muted">Fui trocar o capacitor de um cliente num condomínio onde ninguém me conhecia. Estendi o banner atrás do carro e fui trabalhar. Dois moradores vieram falar comigo e eu fechei duas limpezas ali mesmo. São meus clientes até hoje.</p>
-    <div class="conta">
-      <div><b>R$ 120</b><span>custo do banner</span></div>
-      <div><b>2</b><span>limpezas fechadas</span></div>
-      <div><b>R$ 500</b><span>a mais no dia</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="tk">
-  <div class="wrap stack">
-    <span class="pill">Números reais · março de 2026</span>
-    <h2>R$ 492 por serviço. <span class="o">Sem sair do meu bairro.</span></h2>
-    <p class="muted">Todo mundo diz que é a Zona Sul que dá dinheiro. E dá mesmo. Mas em março eu fiz <b style="color:var(--fg)">70 serviços só em Campo Grande, Guaratiba e Recreio</b>, e cada um valeu, em média, quase R$ 500.</p>
-    <div class="tk-big">
-      <b>R$ 492</b>
-      <span>de ticket médio: o quanto cada serviço valeu, em média, no mês</span>
-    </div>
-    <div class="tk-bars" role="list" aria-label="Ticket médio por tipo de serviço em março">
-      <div class="tk-row" role="listitem"><span class="tk-l">Instalação</span><span class="tk-t"><i style="width:100%"></i></span><b>R$ 892</b></div>
-      <div class="tk-row" role="listitem"><span class="tk-l">Manutenção</span><span class="tk-t"><i style="width:51%"></i></span><b>R$ 452</b></div>
-      <div class="tk-row" role="listitem"><span class="tk-l">Desinstalação</span><span class="tk-t"><i style="width:46%"></i></span><b>R$ 412</b></div>
-      <div class="tk-row" role="listitem"><span class="tk-l">Limpeza</span><span class="tk-t"><i style="width:36%"></i></span><b>R$ 321</b></div>
-      <div class="tk-row" role="listitem"><span class="tk-l">Elétrica</span><span class="tk-t"><i style="width:33%"></i></span><b>R$ 291</b></div>
-    </div>
-    <p class="muted">Repara na manutenção: <b style="color:var(--fg)">22 serviços a R$ 452 cada</b>, em média. Uma limpeza simples não chega nesse valor sozinha. O que leva até lá é o jeito de trabalhar que eu ensino no e-book: o que está incluso antes de fechar, o upgrade na hora certa e o relatório no final.</p>
-    <blockquote class="tk-q">“Não é o bairro que faz o seu ticket médio. <span class="o">É o jeito que você trabalha.</span>”</blockquote>
-    <a class="btn js-buy" href="#oferta">Quero ganhar mais em cada serviço</a>
-    <p class="muted" style="font-size:15px">Números reais da Raposo Soluções em março de 2026. Não são promessa de resultado: cada região e cada técnico têm o seu ritmo.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap stack">
-    <h2>Upgrade: a limpeza que <span class="o">vale mais</span> sem você dar desconto</h2>
-    <p class="muted">Você foi fazer uma limpeza, olha o aparelho e vê o que está faltando. Em vez de só limpar e ir embora, mostra para o cliente e oferece. O valor vai sendo agregado, sem baixar o preço de nada.</p>
-    <div class="conta">
-      <div><b>R$ 3 mil</b><span>limpos por mês só com upgrade, sem cliente novo</span></div>
-      <div><b>6 de 10</b><span>clientes aceitam pelo menos um upgrade</span></div>
-      <div><b>R$ 460 → R$ 1.360</b><span>o meu recorde: uma limpeza que quase triplicou</span></div>
-    </div>
-    <p class="muted">No e-book eu mostro o método passo a passo: a lista do que está incluso antes de fechar, como mostrar a necessidade sem empurrar, a minha lista de upgrades com preços e o <b style="color:var(--fg)">relatório com fotos</b> que fecha cada serviço.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap stack">
-    <h2>Já tive <span class="o">16 ajudantes.</span> Aprendi do jeito difícil.</h2>
-    <p class="muted">Ajudante pode fazer a sua empresa crescer ou te afundar junto. Muito técnico perde cliente, tempo e dinheiro porque não tem coragem de colocar regra, e muito menos de mandar embora. No e-book eu conto o que aprendi:</p>
-    <ul class="chs" style="list-style:none;padding:0;margin:0">
-      <li class="ch"><span class="n">1</span><div><b>Valor e pagamento são do dono</b><span>Por que o ajudante não participa de orçamento nem de cobrança, e o que vocês resolvem juntos.</span></div></li>
-      <li class="ch"><span class="n">2</span><div><b>As regras do dia a dia</b><span>Horário, respeito, bagunça na casa do cliente e nada de política, futebol ou religião com o cliente.</span></div></li>
-      <li class="ch"><span class="n">3</span><div><b>Os sinais de que é hora de mandar embora</b><span>Os 8 sinais que eu observo, e o mais grave, que não tem segunda chance.</span></div></li>
-      <li class="ch"><span class="n">4</span><div><b>Como mandar embora do jeito certo</b><span>A conversa, o acerto com orientação do contador, as ferramentas e os acessos. Sem fofoca no bairro.</span></div></li>
+    <h2>O que muda na sua empresa</h2>
+    <ul class="ganha">
+      <li><span><b>Agenda cheia perto de casa:</b> 3 bairros, sem atravessar a cidade.</span></li>
+      <li><span><b>Cada serviço valendo mais,</b> sem dar desconto: o upgrade que 6 de cada 10 clientes aceitam.</span></li>
+      <li><span><b>Saber quanto você ganha de verdade,</b> com a conta do dia.</span></li>
+      <li><span><b>Ajudante e cliente no lugar certo,</b> com regras claras.</span></li>
+      <li><span><b>Cliente que volta e indica,</b> com pós-venda e lembrete.</span></li>
     </ul>
-  </div>
-</section>
-
-<section id="conteudo">
-  <div class="wrap stack">
-    <h2>O que você vai levar daqui</h2>
-    <p class="muted">7 módulos + desafio de 30 dias. Cada um resolve um problema que você já viu na rua, com exercício para fazer na mesma semana.</p>
-    <ol class="chs">
-      <li class="ch"><span class="n">01</span><div><b>A conta das 24 horas</b><span>Onde o seu tempo e o seu dinheiro vazam todo dia sem você perceber.</span></div></li>
-      <li class="ch"><span class="n">02</span><div><b>Escolha o seu território</b><span>Como escolher 3 bairros e anunciar só para eles com R$ 20 por dia.</span></div></li>
-      <li class="ch"><span class="n">03</span><div><b>O mapa de clientes</b><span>A ficha que transformou atendimento solto em 381 clientes cadastrados.</span></div></li>
-      <li class="ch"><span class="n">04</span><div><b>Seja visto no bairro</b><span>O banner de R$ 120 que voltou R$ 500 no mesmo dia, e 7 dias de post prontos.</span></div></li>
-      <li class="ch"><span class="n">05</span><div><b>Condomínios e clientes fixos</b><span>Como entrar num condomínio novo, a minha tabela de preço do verão e como aumentar o ticket médio de cada serviço.</span></div></li>
-      <li class="ch"><span class="n">06</span><div><b>WhatsApp e cliente que volta</b><span>O pós-venda e o lembrete que fazem o cliente te chamar de novo.</span></div></li>
-      <li class="ch"><span class="n">07</span><div><b>A semana do Dono do Bairro</b><span>Rotina, os 8 sinais para mandar o ajudante embora, ferramentas e a conta do dia.</span></div></li>
-      <li class="ch"><span class="n">30</span><div><b>Desafio Dono do Bairro em 30 dias</b><span>4 semanas em checklist para tirar tudo do papel.</span></div></li>
-    </ol>
-    <div class="bonus">
-      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ee6a33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-      <div><span class="k">Bônus incluso</span><b>Kit para imprimir + tabela de preços de referência</b>
-        <ul><li>Ficha de atendimento e mapa do território</li><li>Desafio de 30 dias e agenda da semana</li><li>Conta do dia e metas</li><li>A minha tabela de preços, para você adaptar</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<section id="por-dentro">
-  <div class="wrap stack">
-    <h2>Veja <span class="o">por dentro</span></h2>
-    <p class="muted">Páginas reais do e-book e do kit para imprimir. Arraste para o lado.</p>
-    <div class="pvs"><figure class="pv"><img src="p-sumario.jpg" alt="Sumário do e-book" width="560" height="792" loading="lazy"><figcaption>O que você vai levar daqui</figcaption></figure><figure class="pv"><img src="p-exercicio.jpg" alt="Exercício prático de cada módulo" width="560" height="792" loading="lazy"><figcaption>Exercício prático de cada módulo</figcaption></figure><figure class="pv"><img src="p-tabela.jpg" alt="Tabela de preço do verão, os valores estão dentro do e-book" width="560" height="792" loading="lazy"><figcaption>A minha tabela do verão (só no e-book)</figcaption></figure><figure class="pv"><img src="p-ficha.jpg" alt="Kit: ficha de atendimento" width="560" height="792" loading="lazy"><figcaption>Kit: ficha de atendimento</figcaption></figure><figure class="pv"><img src="p-desafio.jpg" alt="Kit: desafio de 30 dias" width="560" height="792" loading="lazy"><figcaption>Kit: desafio de 30 dias</figcaption></figure></div>
+    <a class="btn js-buy" href="#oferta">Quero ser o Dono do Bairro</a>
   </div>
 </section>
 
 <section id="oferta">
   <div class="wrap pricebox">
     <h2>Menos que o preço de uma visita técnica</h2>
-    <p class="muted">7 módulos, Desafio de 30 dias e kit para imprimir, prontos para usar na próxima semana. Custa menos que uma única visita técnica.</p>
-    <div class="book"><div class="book-3d" style="width:min(240px,60vw)"><img src="capa-01.jpg" alt="" width="413" height="584"></div></div>
-    <p class="what">52 páginas + kit para imprimir • PDF de acesso imediato</p>
+    <ul class="inc">
+      <li><span>E-book <b>Dono do Bairro</b> <small>· 52 páginas, com exercício em cada módulo</small></span></li>
+      <li><span><b>Kit para imprimir</b> <small>· ficha de cliente, conta do dia, desafio de 30 dias</small></span></li>
+      <li><span>Bônus: <b>Anúncio que enche a agenda</b> <small>· passo a passo no Meta Ads</small></span></li>
+    </ul>
     <p class="big">R$ 37,90 no Pix</p>
-    <p class="under">ou parcelado no cartão</p>
-    <a class="btn js-buy" href="#oferta">Quero ser o Dono do Bairro</a>
-    <p class="under">Pagamento único. Sem mensalidade.</p>
-  </div>
-</section>
-
-<section class="light">
-  <div class="wrap">
-    <h2>Esse guia é pra você que…</h2>
-    <div class="cards">
-      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>É técnico de ar-condicionado e quer parar de atravessar a cidade</span></div>
-      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Faz serviço bem feito, mas não sabe quanto sobra no fim do mês</span></div>
-      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Quer cliente que volta e indica, não só cliente de uma vez</span></div>
-      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Está começando ou já tem ajudante e quer organizar a empresa</span></div>
-    </div>
-    <h3>Não é pra você que…</h3>
-    <div class="cards" style="margin-top:16px">
-      <div class="card no"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Procura curso técnico de instalação ou conserto. Aqui é gestão e divulgação.</span></div>
-      <div class="card no"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Quer agenda cheia garantida. Isso ninguém pode prometer.</span></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap stack author">
-    <h2>Quem é o Felipe Raposo</h2>
-    <div class="photo"><img src="felipe-feira.jpg" alt="Felipe Raposo em feira do setor de climatização, com camisa da Raposo" width="720" height="720" loading="lazy"></div>
-    <p class="cap">Em feira do setor de climatização.</p>
-    <img src="protecao.jpg" alt="Parede e teto protegidos com plástico antes de uma limpeza de ar-condicionado" width="520" height="1155" loading="lazy">
-    <p class="muted">Sou técnico de ar-condicionado e dono da Raposo Soluções, no Rio de Janeiro. Trabalho de segunda a sábado com o meu ajudante, em Campo Grande, Guaratiba e Recreio. Comecei com uma moto de R$ 1.000.</p>
-    <p class="muted">Errei dando desconto demais, perdendo ferramenta, rodando a cidade. Neste e-book eu conto o que mudou quando eu parei de ser só técnico e comecei a cuidar da empresa.</p>
+    <p class="under">ou parcelado no cartão · acesso imediato</p>
+    <a class="btn js-buy" href="#oferta">Quero organizar a minha empresa</a>
+    <div class="guar" style="text-align:left"><div class="seal"><b>7</b><small>DIAS</small></div><div><h3 style="margin-bottom:8px">Garantia de 7 dias</h3><p class="muted">Se não for pra você, peça o reembolso dentro do prazo pela plataforma de pagamento.</p></div></div>
   </div>
 </section>
 
 <section>
   <div class="wrap stack">
-    <h2>“Mas eu tenho uma dúvida antes de comprar…”</h2>
+    <h2>Dúvidas rápidas</h2>
     <div class="faq">
-      <div class="item"><h3>“Eu já tenho cliente, isso é muito básico”</h3><p>O livro não ensina a instalar ar. Ensina o que trava o técnico que já trabalha: escolher onde atender, cobrar certo, fazer o cliente voltar e saber quanto sobra no mês.</p></div>
-      <div class="item"><h3>“R$ 37,90 é barato demais, deve ser fraco”</h3><p>O preço é baixo de propósito: quero que todo técnico consiga começar. São 52 páginas com a minha rotina real, tabela de preços de referência, exercícios e kit para imprimir.</p></div>
-      <div class="item"><h3>“Eu não sou do Rio de Janeiro”</h3><p>O método vale para qualquer cidade. Os meus preços entram como referência, e o livro mostra como montar os seus com a conta do dia.</p></div>
-      <div class="item"><h3>“Não tenho tempo de ler”</h3><p>Os módulos são curtos. Dá para ler um por noite e fazer o exercício no dia seguinte, no intervalo entre um serviço e outro.</p></div>
-      <div class="item"><h3>“Tem vídeo-aula?”</h3><p>Não. É um e-book em PDF, para ler no celular ou imprimir, no seu ritmo.</p></div>
+      <div class="item"><h3>“É curso técnico?”</h3><p>Não. Aqui não ensina a instalar nem a consertar. Ensina a organizar a empresa: onde atender, quanto cobrar e como fazer o cliente voltar.</p></div>
+      <div class="item"><h3>“Eu não sou do Rio de Janeiro”</h3><p>O método vale para qualquer cidade. Os meus números entram como exemplo, e o livro mostra como fazer as suas contas.</p></div>
+      <div class="item"><h3>“Não tenho tempo de ler”</h3><p>Os módulos são curtos. Dá para ler um por noite e aplicar no dia seguinte.</p></div>
     </div>
-    <div class="guar"><div class="seal"><b>7</b><small>DIAS</small></div><div><h3 style="margin-bottom:8px">Garantia de 7 dias</h3><p class="muted">Se não for para você, peça o reembolso dentro do prazo pela plataforma de pagamento.</p></div></div>
     <a class="btn js-buy" href="#oferta">Quero o meu Dono do Bairro</a>
   </div>
 </section>

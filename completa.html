@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dono-do-bairro.vercel.app/completa.html">
+<meta property="og:title" content="Dono do Bairro · Agenda cheia sem rodar a cidade">
+<meta property="og:description" content="O passo a passo de um técnico de ar-condicionado com 381 clientes em 3 bairros. E-book + kit para imprimir.">
+<meta property="og:image" content="https://dono-do-bairro.vercel.app/capa-01.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="O passo a passo de um técnico de ar-condicionado com 381 clientes em 3 bairros. E-book + kit para imprimir.">
+<title>Dono do Bairro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="E-book para técnico de ar-condicionado: escolha 3 bairros, apareça para os clientes certos, organize a semana e saiba quanto cobrar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: one dark job-site column with a hazard-tape banner, orange pill buttons and a fixed buy bar; a single light band for "pra você que". Deliberately single-theme dark. */
+:root{
+  --bg:#111111; --panel:#1b1b1b; --panel-2:#222; --line:#2c2c2c;
+  --fg:#f4f2ef; --muted:#b4aea6; --fox:#ee6a33; --fox-ink:#1a0d06;
+  --light-bg:#f2f1ef; --light-card:#ffffff; --light-fg:#141414; --light-line:#e2dfda;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:19px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:64px;border-top:1px solid var(--line)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+h1{font-size:clamp(42px,8vw,64px);font-weight:900}
+h2{font-size:clamp(32px,5.6vw,44px);font-weight:900}
+h3{font-size:22px;font-weight:800}
+p{margin:0}
+.o{color:var(--fox)}
+.stack{display:flex;flex-direction:column;gap:22px}
+.muted{color:var(--muted)}
+
+/* hazard banner */
+.tape{background:var(--fox);color:var(--fox-ink);font-family:var(--display);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.02em;text-align:center;position:relative}
+.tape::before{content:"";display:block;height:14px;background:repeating-linear-gradient(-45deg,#111 0 18px,var(--fox) 18px 36px)}
+.tape p{padding:12px max(20px,env(safe-area-inset-right,0px)) 14px max(20px,env(safe-area-inset-left,0px))}
+
+/* pill + buttons */
+.pill{align-self:flex-start;border:1.5px solid var(--fox);color:var(--fox);border-radius:999px;padding:8px 18px;font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.btn{display:flex;align-items:center;justify-content:center;background:var(--fox);color:var(--fox-ink);font-family:var(--display);font-weight:800;font-size:21px;text-decoration:none;padding:20px 28px;border-radius:999px;box-shadow:0 10px 40px -8px rgba(238,106,51,.55);transition:transform .15s,filter .15s;text-align:center}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+.pvs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.pv{flex:0 0 min(72%,280px);margin:0;scroll-snap-align:start}
+.pv img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 10px 30px -12px rgba(0,0,0,.8)}
+.pv figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+/* hero */
+.bens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ben{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--fox);border-radius:12px;padding:14px;min-width:0}
+.ben .bi{width:44px;height:44px;border-radius:10px;background:#2a1a12;color:var(--fox);display:grid;place-items:center}
+.ben b{display:block;font-family:var(--display);font-weight:800;font-size:17px;line-height:1.2;text-transform:uppercase;letter-spacing:.01em}
+.ben span:not(.bi){display:block;color:var(--muted);font-size:14.5px;line-height:1.35;margin-top:4px}
+.chk{list-style:none;margin:0;padding:16px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;border:1.5px solid var(--fox);border-radius:14px}
+.chk li{display:flex;gap:10px;align-items:center;font-family:var(--display);font-weight:700;font-size:15px}
+.chk li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--fox);color:var(--fox-ink);display:grid;place-items:center;font-size:13px;font-weight:900}
+@media (max-width:560px){ .bens{grid-template-columns:1fr;gap:8px} .ben{padding:10px 12px;grid-template-columns:38px 1fr;align-items:center} .ben .bi{width:38px;height:38px} .ben b{font-size:15.5px} .ben span:not(.bi){font-size:13.5px;margin-top:2px} }
+@media (max-width:380px){ .chk{grid-template-columns:1fr} }
+
+.hero{border-top:0;padding-block:44px 56px}
+.lead{font-size:clamp(19px,2.4vw,22px);color:var(--muted)}
+.book{perspective:1400px;display:flex;justify-content:center;padding-block:18px}
+.book-3d{position:relative;width:min(300px,72vw);transform:rotateY(-18deg) rotateX(3deg);transform-style:preserve-3d}
+.book-3d img{display:block;width:100%;height:auto;border-radius:2px 6px 6px 2px;box-shadow:24px 30px 50px -14px rgba(0,0,0,.9)}
+.book-3d::before{content:"";position:absolute;top:0;bottom:0;left:0;width:7%;z-index:2;border-radius:2px 0 0 2px;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(0,0,0,.4) 45%,rgba(255,255,255,.06) 75%,rgba(0,0,0,.3))}
+.book-3d::after{content:"";position:absolute;top:1.5%;bottom:1.5%;right:-14px;width:14px;transform:rotateY(70deg);transform-origin:left;background:repeating-linear-gradient(90deg,#efe9df 0 1px,#d8d0c4 1px 2px);border-radius:0 2px 2px 0}
+
+/* quote bar */
+.qbar{border-left:5px solid var(--fox);padding-left:22px;font-family:var(--display);font-weight:800;font-size:clamp(22px,3.4vw,27px);line-height:1.3}
+
+/* chip */
+.chip{align-self:flex-start;display:inline-flex;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:12px 22px;font-size:17px}
+.chip svg{flex:none}
+
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.num{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.num b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(38px,6vw,50px);line-height:1;color:var(--fox);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:8px;font-size:16px;color:var(--muted)}
+
+/* banner proof */
+.photo{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.photo img{display:block;width:100%;height:auto}
+.cap{font-size:15px;color:var(--muted);margin-top:-10px}
+.tk{background:radial-gradient(120% 60% at 50% 0%,rgba(238,106,51,.14),transparent 70%),var(--bg)}
+.tk-big{background:var(--panel);border:1.5px solid var(--fox);border-radius:16px;padding:22px 20px;text-align:center}
+.tk-big b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(64px,16vw,96px);line-height:1;color:var(--fox);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.tk-big span{display:block;margin-top:10px;font-size:16px;color:var(--muted)}
+.tk-bars{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.tk-row{display:grid;grid-template-columns:118px minmax(0,1fr) 72px;align-items:center;gap:12px;font-size:16px}
+.tk-l{color:var(--fg)}
+.tk-t{height:14px;background:var(--panel-2);border-radius:999px;overflow:hidden}
+.tk-t i{display:block;height:100%;background:var(--fox);border-radius:999px}
+.tk-row b{font-family:var(--display);font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.tk-q{margin:0;border-left:4px solid var(--fox);padding:6px 0 6px 18px;font-family:var(--display);font-weight:800;font-size:clamp(22px,4.4vw,28px);line-height:1.2}
+@media (max-width:420px){.tk-row{grid-template-columns:108px minmax(0,1fr) 62px;gap:8px;font-size:14.5px}}
+.conta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.conta div{background:var(--panel);border-radius:12px;padding:14px;border:1px solid var(--line);min-width:0}
+.conta b{display:block;font-family:var(--display);font-size:24px;color:var(--fg);font-variant-numeric:tabular-nums}
+.conta span{font-size:14px;color:var(--muted)}
+
+/* chapters */
+.chs{list-style:none;margin:6px 0 0;padding:0}
+.ch{display:grid;grid-template-columns:62px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.ch:last-child{border-bottom:1px solid var(--line)}
+.ch .n{width:62px;height:62px;border:1.5px solid var(--fox);border-radius:12px;background:var(--panel-2);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:20px;color:var(--fg)}
+.ch b{display:block;font-family:var(--display);font-size:21px;line-height:1.25;margin-bottom:4px}
+.ch span{color:var(--muted);font-size:17px}
+.ch > div{min-width:0}
+
+/* bonus card */
+.bonus{display:grid;grid-template-columns:62px 1fr;gap:20px;border:1.5px dashed var(--fox);border-radius:16px;padding:24px;background:linear-gradient(180deg,#22160f,#161210)}
+.bonus .ic{width:62px;height:62px;border-radius:12px;background:#0d0d0d;display:grid;place-items:center}
+.bonus .k{font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.bonus b{display:block;font-family:var(--display);font-size:21px;margin:6px 0}
+.bonus p{color:var(--muted);font-size:17px}
+.bonus > div{min-width:0}
+.bonus ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:17px}
+
+/* price block */
+.pricebox{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.pricebox .what{color:var(--muted);font-size:18px}
+.big{font-family:var(--display);font-weight:900;font-size:clamp(40px,8vw,54px);color:var(--fox);line-height:1}
+.under{color:var(--muted);font-size:17px}
+
+/* light band */
+.light{background:var(--light-bg);color:var(--light-fg);border-top:0}
+.light h2{color:var(--light-fg)}
+.cards{display:grid;gap:14px;margin-top:28px}
+.card{display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:center;background:var(--light-card);border:1px solid var(--light-line);border-radius:16px;padding:22px 24px;font-size:19px}
+.card svg{color:var(--fox)}
+.card.no svg{color:#b23a48}
+.light h3{margin-top:40px;color:var(--light-fg)}
+
+/* author */
+.author img{border-radius:14px;display:block;width:100%;max-height:420px;object-fit:cover;border:1px solid var(--line)}
+
+/* faq */
+.faq{display:grid}
+.faq .item{padding-block:26px;border-top:1px solid var(--line)}
+.faq .item:last-child{border-bottom:1px solid var(--line)}
+.faq h3{font-size:21px;margin-bottom:10px}
+.faq p{color:var(--muted)}
+
+/* guarantee */
+.guar{display:grid;grid-template-columns:96px 1fr;gap:22px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.seal{width:96px;height:96px;border-radius:50%;border:3px solid var(--fox);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:900;color:var(--fox);line-height:.9}
+.seal b{font-size:40px;display:block}
+.seal small{font-size:12px;letter-spacing:.12em}
+.guar > div{min-width:0}
+
+footer{padding-block:28px 120px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+footer a{color:var(--fg)}
+
+/* sticky buy bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#161616;border-top:1px solid var(--line);
+  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.bar .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:16px}
+.bar .p{flex:none;line-height:1.15}
+.bar .p b{display:block;font-family:var(--display);font-weight:900;font-size:22px;color:var(--fox)}
+.bar .p small{font-size:13px;color:var(--muted);font-weight:600}
+.bar .btn{flex:1;padding:15px 18px;font-size:19px;box-shadow:none}
+@media (max-width:420px){ .conta{grid-template-columns:1fr} .bar .p b{font-size:19px} .guar{grid-template-columns:1fr} .bonus{grid-template-columns:1fr} }
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3072531926115631');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.js-buy');if(a&&a.getAttribute('href').indexOf('kiwify')>-1){fbq('track','InitiateCheckout',{content_name:'Dono do Bairro',value:37.90,currency:'BRL'});}});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3072531926115631&ev=PageView&noscript=1" alt=""></noscript>
+<!-- /Meta Pixel -->
+</head>
+<body>
+
+
+<div class="tape"><p>⚡ Preço de lançamento: R$ 37,90 no Pix</p></div>
+
+<section class="hero">
+  <div class="wrap stack">
+    <span class="pill">E-book • Ar-condicionado</span>
+    <h1>Pare de rodar a cidade. <span class="o">Seja o técnico do seu bairro.</span></h1>
+    <p class="lead">O passo a passo de um técnico que continua em campo para lotar a agenda perto de casa e organizar a sua empresa.</p>
+    <div class="bens"><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Agenda cheia perto de casa</b><span>3 bairros, anúncio de R$ 20 por dia só para eles.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2-1.4 0-2.6-.6-3.1-1.6M12 6.5v11"/></svg></span><div><b>Orçamento que dá lucro</b><span>A minha tabela de preços e a conta do dia.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></span><div><b>Ticket médio maior</b><span>Ganhe mais em cada serviço, sem cliente novo.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.5 2.2 4.5 5"/></svg></span><div><b>Ajudante e equipe</b><span>Regras, os sinais e como mandar embora.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></span><div><b>Família no negócio</b><span>"Minha mulher não me ajuda" não é desculpa.</span></div></div><div class="ben"><span class="bi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></span><div><b>Cliente que volta</b><span>Pós-venda, lembrete de 6 meses e plano fixo.</span></div></div></div>
+    <ul class="chk"><li>Passo a passo prático</li><li>Exemplos reais do meu dia a dia</li><li>Modelos para imprimir</li><li>Aplicação imediata</li></ul>
+    <div class="book"><div class="book-3d"><img src="capa-01.jpg" alt="Capa do e-book Dono do Bairro, de Felipe Raposo" width="413" height="584"></div></div>
+    <a class="btn js-buy" href="#oferta">Quero ser o Dono do Bairro</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>Aquele dia em que você atravessa a cidade por um serviço só e chega em casa sem nada no bolso</h2>
+    <p class="muted">Você sai cedo, pega trânsito, paga gasolina, estacionamento, almoço. Faz o serviço bem feito. Volta à noite cansado. E quando faz a conta, quase não sobrou nada.</p>
+    <p class="qbar">Não é falta de trabalho. É falta de organização.</p>
+    <p class="muted">Ninguém ensina o técnico a escolher onde atender, quanto cobrar e como fazer o cliente voltar. Aí você aceita tudo, dá desconto, cobra no chute e passa a vida correndo atrás de cliente novo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>O atalho pra você <span class="o">parar de rodar</span> e começar a lucrar perto de casa</h2>
+    <p class="muted">Eu atendia a Zona Sul morando em Campo Grande. Saía às 6h30 para atender às 9h e voltava às 20h. Aos meus olhos, era lucrativo. Até que a minha esposa fez as contas: <b style="color:var(--fg)">o lucro era o mesmo de um dia trabalhando perto de casa</b>, só que eu perdia 4 horas no trânsito.</p>
+    <p class="muted">Foi aí que eu escolhi três bairros e decidi ser o técnico de referência neles. O “Dono do Bairro” é o passo a passo do que eu faço, escrito de técnico para técnico, sem enrolação.</p>
+    <span class="chip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee6a33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg>Com exercício prático em cada módulo</span>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>Quem escreveu está em campo <span class="o">todo dia</span></h2>
+    <div class="photo"><img src="felipe-aparelhos.jpg" alt="Felipe Raposo com vários aparelhos de ar-condicionado Samsung para instalar" width="800" height="600" loading="lazy"></div>
+    <div class="nums">
+      <div class="num"><b>3</b><span>bairros atendidos: Campo Grande, Guaratiba e Recreio</span></div>
+      <div class="num"><b>381</b><span>clientes cadastrados, com nome, endereço e histórico</span></div>
+      <div class="num"><b>954</b><span>atendimentos no ano passado, somando as equipes</span></div>
+      <div class="num"><b>11</b><span>clientes com plano fixo de manutenção</span></div>
+    </div>
+    <p class="muted" style="font-size:15px">Números reais da Raposo Soluções. Não são promessa de resultado: cada região e cada técnico têm o seu ritmo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>Gastei R$ 120 num banner. <span class="o">Voltei com R$ 500.</span></h2>
+    <div class="photo"><img src="banner.jpg" alt="Banner em pé atrás do carro do Felipe, num condomínio no Recreio" width="480" height="470" loading="lazy"></div>
+    <p class="cap">O banner atrás do carro, no Recreio, em dezembro de 2025.</p>
+    <p class="muted">Fui trocar o capacitor de um cliente num condomínio onde ninguém me conhecia. Estendi o banner atrás do carro e fui trabalhar. Dois moradores vieram falar comigo e eu fechei duas limpezas ali mesmo. São meus clientes até hoje.</p>
+    <div class="conta">
+      <div><b>R$ 120</b><span>custo do banner</span></div>
+      <div><b>2</b><span>limpezas fechadas</span></div>
+      <div><b>R$ 500</b><span>a mais no dia</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tk">
+  <div class="wrap stack">
+    <span class="pill">Números reais · março de 2026</span>
+    <h2>R$ 492 por serviço. <span class="o">Sem sair do meu bairro.</span></h2>
+    <p class="muted">Todo mundo diz que é a Zona Sul que dá dinheiro. E dá mesmo. Mas em março eu fiz <b style="color:var(--fg)">70 serviços só em Campo Grande, Guaratiba e Recreio</b>, e cada um valeu, em média, quase R$ 500.</p>
+    <div class="tk-big">
+      <b>R$ 492</b>
+      <span>de ticket médio: o quanto cada serviço valeu, em média, no mês</span>
+    </div>
+    <div class="tk-bars" role="list" aria-label="Ticket médio por tipo de serviço em março">
+      <div class="tk-row" role="listitem"><span class="tk-l">Instalação</span><span class="tk-t"><i style="width:100%"></i></span><b>R$ 892</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Manutenção</span><span class="tk-t"><i style="width:51%"></i></span><b>R$ 452</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Desinstalação</span><span class="tk-t"><i style="width:46%"></i></span><b>R$ 412</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Limpeza</span><span class="tk-t"><i style="width:36%"></i></span><b>R$ 321</b></div>
+      <div class="tk-row" role="listitem"><span class="tk-l">Elétrica</span><span class="tk-t"><i style="width:33%"></i></span><b>R$ 291</b></div>
+    </div>
+    <p class="muted">Repara na manutenção: <b style="color:var(--fg)">22 serviços a R$ 452 cada</b>, em média. Uma limpeza simples não chega nesse valor sozinha. O que leva até lá é o jeito de trabalhar que eu ensino no e-book: o que está incluso antes de fechar, o upgrade na hora certa e o relatório no final.</p>
+    <blockquote class="tk-q">“Não é o bairro que faz o seu ticket médio. <span class="o">É o jeito que você trabalha.</span>”</blockquote>
+    <a class="btn js-buy" href="#oferta">Quero ganhar mais em cada serviço</a>
+    <p class="muted" style="font-size:15px">Números reais da Raposo Soluções em março de 2026. Não são promessa de resultado: cada região e cada técnico têm o seu ritmo.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>Upgrade: a limpeza que <span class="o">vale mais</span> sem você dar desconto</h2>
+    <p class="muted">Você foi fazer uma limpeza, olha o aparelho e vê o que está faltando. Em vez de só limpar e ir embora, mostra para o cliente e oferece. O valor vai sendo agregado, sem baixar o preço de nada.</p>
+    <div class="conta">
+      <div><b>R$ 3 mil</b><span>limpos por mês só com upgrade, sem cliente novo</span></div>
+      <div><b>6 de 10</b><span>clientes aceitam pelo menos um upgrade</span></div>
+      <div><b>R$ 460 → R$ 1.360</b><span>o meu recorde: uma limpeza que quase triplicou</span></div>
+    </div>
+    <p class="muted">No e-book eu mostro o método passo a passo: a lista do que está incluso antes de fechar, como mostrar a necessidade sem empurrar, a minha lista de upgrades com preços e o <b style="color:var(--fg)">relatório com fotos</b> que fecha cada serviço.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>Já tive <span class="o">16 ajudantes.</span> Aprendi do jeito difícil.</h2>
+    <p class="muted">Ajudante pode fazer a sua empresa crescer ou te afundar junto. Muito técnico perde cliente, tempo e dinheiro porque não tem coragem de colocar regra, e muito menos de mandar embora. No e-book eu conto o que aprendi:</p>
+    <ul class="chs" style="list-style:none;padding:0;margin:0">
+      <li class="ch"><span class="n">1</span><div><b>Valor e pagamento são do dono</b><span>Por que o ajudante não participa de orçamento nem de cobrança, e o que vocês resolvem juntos.</span></div></li>
+      <li class="ch"><span class="n">2</span><div><b>As regras do dia a dia</b><span>Horário, respeito, bagunça na casa do cliente e nada de política, futebol ou religião com o cliente.</span></div></li>
+      <li class="ch"><span class="n">3</span><div><b>Os sinais de que é hora de mandar embora</b><span>Os 8 sinais que eu observo, e o mais grave, que não tem segunda chance.</span></div></li>
+      <li class="ch"><span class="n">4</span><div><b>Como mandar embora do jeito certo</b><span>A conversa, o acerto com orientação do contador, as ferramentas e os acessos. Sem fofoca no bairro.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="conteudo">
+  <div class="wrap stack">
+    <h2>O que você vai levar daqui</h2>
+    <p class="muted">7 módulos + desafio de 30 dias. Cada um resolve um problema que você já viu na rua, com exercício para fazer na mesma semana.</p>
+    <ol class="chs">
+      <li class="ch"><span class="n">01</span><div><b>A conta das 24 horas</b><span>Onde o seu tempo e o seu dinheiro vazam todo dia sem você perceber.</span></div></li>
+      <li class="ch"><span class="n">02</span><div><b>Escolha o seu território</b><span>Como escolher 3 bairros e anunciar só para eles com R$ 20 por dia.</span></div></li>
+      <li class="ch"><span class="n">03</span><div><b>O mapa de clientes</b><span>A ficha que transformou atendimento solto em 381 clientes cadastrados.</span></div></li>
+      <li class="ch"><span class="n">04</span><div><b>Seja visto no bairro</b><span>O banner de R$ 120 que voltou R$ 500 no mesmo dia, e 7 dias de post prontos.</span></div></li>
+      <li class="ch"><span class="n">05</span><div><b>Condomínios e clientes fixos</b><span>Como entrar num condomínio novo, a minha tabela de preço do verão e como aumentar o ticket médio de cada serviço.</span></div></li>
+      <li class="ch"><span class="n">06</span><div><b>WhatsApp e cliente que volta</b><span>O pós-venda e o lembrete que fazem o cliente te chamar de novo.</span></div></li>
+      <li class="ch"><span class="n">07</span><div><b>A semana do Dono do Bairro</b><span>Rotina, os 8 sinais para mandar o ajudante embora, ferramentas e a conta do dia.</span></div></li>
+      <li class="ch"><span class="n">30</span><div><b>Desafio Dono do Bairro em 30 dias</b><span>4 semanas em checklist para tirar tudo do papel.</span></div></li>
+    </ol>
+    <div class="bonus">
+      <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ee6a33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+      <div><span class="k">Bônus incluso</span><b>Kit para imprimir + tabela de preços de referência</b>
+        <ul><li>Ficha de atendimento e mapa do território</li><li>Desafio de 30 dias e agenda da semana</li><li>Conta do dia e metas</li><li>A minha tabela de preços, para você adaptar</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="por-dentro">
+  <div class="wrap stack">
+    <h2>Veja <span class="o">por dentro</span></h2>
+    <p class="muted">Páginas reais do e-book e do kit para imprimir. Arraste para o lado.</p>
+    <div class="pvs"><figure class="pv"><img src="p-sumario.jpg" alt="Sumário do e-book" width="560" height="792" loading="lazy"><figcaption>O que você vai levar daqui</figcaption></figure><figure class="pv"><img src="p-exercicio.jpg" alt="Exercício prático de cada módulo" width="560" height="792" loading="lazy"><figcaption>Exercício prático de cada módulo</figcaption></figure><figure class="pv"><img src="p-tabela.jpg" alt="Tabela de preço do verão, os valores estão dentro do e-book" width="560" height="792" loading="lazy"><figcaption>A minha tabela do verão (só no e-book)</figcaption></figure><figure class="pv"><img src="p-ficha.jpg" alt="Kit: ficha de atendimento" width="560" height="792" loading="lazy"><figcaption>Kit: ficha de atendimento</figcaption></figure><figure class="pv"><img src="p-desafio.jpg" alt="Kit: desafio de 30 dias" width="560" height="792" loading="lazy"><figcaption>Kit: desafio de 30 dias</figcaption></figure></div>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="wrap pricebox">
+    <h2>Menos que o preço de uma visita técnica</h2>
+    <p class="muted">7 módulos, Desafio de 30 dias e kit para imprimir, prontos para usar na próxima semana. Custa menos que uma única visita técnica.</p>
+    <div class="book"><div class="book-3d" style="width:min(240px,60vw)"><img src="capa-01.jpg" alt="" width="413" height="584"></div></div>
+    <p class="what">52 páginas + kit para imprimir • PDF de acesso imediato</p>
+    <p class="big">R$ 37,90 no Pix</p>
+    <p class="under">ou parcelado no cartão</p>
+    <a class="btn js-buy" href="#oferta">Quero ser o Dono do Bairro</a>
+    <p class="under">Pagamento único. Sem mensalidade.</p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <h2>Esse guia é pra você que…</h2>
+    <div class="cards">
+      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>É técnico de ar-condicionado e quer parar de atravessar a cidade</span></div>
+      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Faz serviço bem feito, mas não sabe quanto sobra no fim do mês</span></div>
+      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Quer cliente que volta e indica, não só cliente de uma vez</span></div>
+      <div class="card"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Está começando ou já tem ajudante e quer organizar a empresa</span></div>
+    </div>
+    <h3>Não é pra você que…</h3>
+    <div class="cards" style="margin-top:16px">
+      <div class="card no"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Procura curso técnico de instalação ou conserto. Aqui é gestão e divulgação.</span></div>
+      <div class="card no"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Quer agenda cheia garantida. Isso ninguém pode prometer.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack author">
+    <h2>Quem é o Felipe Raposo</h2>
+    <div class="photo"><img src="felipe-feira.jpg" alt="Felipe Raposo em feira do setor de climatização, com camisa da Raposo" width="720" height="720" loading="lazy"></div>
+    <p class="cap">Em feira do setor de climatização.</p>
+    <img src="protecao.jpg" alt="Parede e teto protegidos com plástico antes de uma limpeza de ar-condicionado" width="520" height="1155" loading="lazy">
+    <p class="muted">Sou técnico de ar-condicionado e dono da Raposo Soluções, no Rio de Janeiro. Trabalho de segunda a sábado com o meu ajudante, em Campo Grande, Guaratiba e Recreio. Comecei com uma moto de R$ 1.000.</p>
+    <p class="muted">Errei dando desconto demais, perdendo ferramenta, rodando a cidade. Neste e-book eu conto o que mudou quando eu parei de ser só técnico e comecei a cuidar da empresa.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <h2>“Mas eu tenho uma dúvida antes de comprar…”</h2>
+    <div class="faq">
+      <div class="item"><h3>“Eu já tenho cliente, isso é muito básico”</h3><p>O livro não ensina a instalar ar. Ensina o que trava o técnico que já trabalha: escolher onde atender, cobrar certo, fazer o cliente voltar e saber quanto sobra no mês.</p></div>
+      <div class="item"><h3>“R$ 37,90 é barato demais, deve ser fraco”</h3><p>O preço é baixo de propósito: quero que todo técnico consiga começar. São 52 páginas com a minha rotina real, tabela de preços de referência, exercícios e kit para imprimir.</p></div>
+      <div class="item"><h3>“Eu não sou do Rio de Janeiro”</h3><p>O método vale para qualquer cidade. Os meus preços entram como referência, e o livro mostra como montar os seus com a conta do dia.</p></div>
+      <div class="item"><h3>“Não tenho tempo de ler”</h3><p>Os módulos são curtos. Dá para ler um por noite e fazer o exercício no dia seguinte, no intervalo entre um serviço e outro.</p></div>
+      <div class="item"><h3>“Tem vídeo-aula?”</h3><p>Não. É um e-book em PDF, para ler no celular ou imprimir, no seu ritmo.</p></div>
+    </div>
+    <div class="guar"><div class="seal"><b>7</b><small>DIAS</small></div><div><h3 style="margin-bottom:8px">Garantia de 7 dias</h3><p class="muted">Se não for para você, peça o reembolso dentro do prazo pela plataforma de pagamento.</p></div></div>
+    <a class="btn js-buy" href="#oferta">Quero o meu Dono do Bairro</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© 2026 Felipe Raposo · Raposo Soluções · Rio de Janeiro</span><a href="https://www.instagram.com/raposo.arcondicionado" target="_blank" rel="noopener">Instagram @raposo.arcondicionado</a></div>
+</footer>
+
+<div class="bar"><div class="in"><div class="p"><b>R$ 37,90 PIX</b><small>ou parcelado no cartão</small></div><a class="btn js-buy" href="#oferta">Comprar agora</a></div></div>
+
+<script>
+// Link do checkout da Kiwify: cole aqui quando o produto estiver criado.
+var CHECKOUT = "https://pay.kiwify.com.br/U98LNVp";
+if (CHECKOUT) {
+  document.querySelectorAll(".js-buy").forEach(function (a) {
+    var q = location.search.slice(1);
+    a.href = CHECKOUT + (q ? (CHECKOUT.indexOf("?") > -1 ? "&" : "?") + q : "");
+  });
+}
+</script>
+
+</body>
+</html>
