@@ -175,6 +175,9 @@ footer a{color:var(--fg)}
 @media (max-width:420px){ .conta{grid-template-columns:1fr} .bar .p b{font-size:19px} .guar{grid-template-columns:1fr} .bonus{grid-template-columns:1fr} }
 
 /* página curta */
+.proof{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:10px 16px;font-size:15.5px;color:var(--muted);line-height:1.35}
+.proof b{color:var(--fg)}
+.pd{flex:none;width:10px;height:10px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 4px rgba(61,220,132,.18)}
 .dor{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .dor li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:18px;line-height:1.4}
 .dor li::before{content:"✕";width:30px;height:30px;border-radius:50%;background:#2a1414;color:#ff6b5e;display:grid;place-items:center;font-weight:900;font-size:15px}
@@ -209,8 +212,11 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <section class="hero">
   <div class="wrap stack">
     <span class="pill">Para técnico de ar-condicionado</span>
-    <h1>2h37 da manhã. <span class="o">O corpo cansado, mas a cabeça não desliga.</span></h1>
+    <h1>Como passar de <span class="o">R$ 10 mil por mês</span> com ar&#8209;condicionado sem sair do seu bairro</h1>
+    <div class="proof"><span class="pd"></span><span><b>+867 seguidores em 1 mês</b> no @raposo.arcondicionado. Técnico seguindo técnico.</span></div>
+    <a class="btn js-buy" href="#oferta">Quero passar dos R$ 10 mil no meu bairro</a>
     <div class="photo"><img src="tecnico-2h37.jpg" alt="Técnico de ar-condicionado deitado às 2h37 da manhã, com a cabeça cheia: clientes, trabalho, contas, ferramentas, família, cansaço" width="900" height="1194"></div>
+    <p class="qbar" style="font-size:clamp(21px,3.2vw,25px)">2h37 da manhã. O corpo cansado, mas a cabeça não desliga.</p>
     <p class="lead">Cliente pra atender, conta pra pagar, ajudante que faltou, orçamento que ninguém respondeu, família esperando.</p>
     <p class="qbar">Se você trabalha muito e o dinheiro não sobra, o problema não é falta de serviço. É falta de organização.</p>
     <a class="btn js-buy" href="#oferta">Quero organizar a minha empresa</a>
